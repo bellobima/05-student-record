@@ -212,6 +212,90 @@ tbody tr:last-child td {
     color: #9c202c;
 }
 
+.alert-success {
+    background: #eaf7ef;
+    color: #21643b;
+}
+
+.student-form {
+    padding: 24px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-field {
+    min-width: 0;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid #cfd5e1;
+    border-radius: 6px;
+    padding: 9px 11px;
+    background: #fff;
+    color: #172033;
+    font: inherit;
+}
+
+.form-field input:focus,
+.form-field select:focus {
+    border-color: #3457d5;
+    outline: 3px solid rgb(52 87 213 / 14%);
+}
+
+.form-field [aria-invalid="true"] {
+    border-color: #b42332;
+}
+
+.field-hint {
+    color: #778198;
+    font-weight: 400;
+}
+
+.form-error {
+    margin: 6px 0 0;
+    color: #a02230;
+    font-size: 0.84rem;
+}
+
+.form-error-summary {
+    margin: 0 0 20px;
+    border-radius: 6px;
+    padding: 11px 13px;
+    background: #fff0f0;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.button-secondary {
+    border: 1px solid #d5dae4;
+    background: #fff;
+    color: #46516a;
+}
+
+.button-secondary:hover {
+    background: #f7f8fb;
+    text-decoration: none;
+}
+
 .error-card {
     max-width: 680px;
     margin: 48px auto;
@@ -252,6 +336,15 @@ tbody tr:last-child td {
 
     .page-heading .button {
         width: 100%;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .student-form {
+        padding: 18px;
     }
 
     .error-card {
