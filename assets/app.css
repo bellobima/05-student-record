@@ -204,6 +204,103 @@ tbody tr:last-child td {
     margin: 0 0 16px;
 }
 
+.filter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-search {
+    flex: 1 1 280px;
+}
+
+.filter-form input,
+.filter-form select {
+    width: 100%;
+    min-height: 40px;
+    border: 1px solid #cfd5e1;
+    border-radius: 6px;
+    padding: 8px 11px;
+    background: #fff;
+    color: #172033;
+    font: inherit;
+}
+
+.filter-course {
+    flex: 0 1 220px;
+}
+
+.results-summary {
+    margin: 0 0 12px;
+    color: #647087;
+    font-size: 0.9rem;
+}
+
+.filter-notice {
+    margin: -8px 0 14px;
+    color: #9c202c;
+    font-size: 0.9rem;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 20px;
+}
+
+.pagination-link,
+.pagination-current {
+    display: inline-flex;
+    min-width: 36px;
+    min-height: 36px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d5dae4;
+    border-radius: 6px;
+    padding: 6px 10px;
+    background: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.pagination-current {
+    border-color: #3457d5;
+    background: #3457d5;
+    color: #fff;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+.seed-card {
+    padding: 26px;
+}
+
+.seed-card h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
+
+.seed-card p {
+    margin: 0 0 20px;
+    color: #647087;
+    line-height: 1.6;
+}
+
+.seed-card .button + .button {
+    margin-left: 8px;
+}
+
 .alert {
     margin-bottom: 20px;
     border-radius: 7px;
@@ -377,6 +474,28 @@ tbody tr:last-child td {
 
     .page-heading .button {
         width: 100%;
+    }
+
+    .filter-form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filter-search,
+    .filter-course {
+        flex: auto;
+    }
+
+    .filter-form .button {
+        width: 100%;
+    }
+
+    .seed-card .button {
+        width: 100%;
+    }
+
+    .seed-card .button + .button {
+        margin: 10px 0 0;
     }
 
     .form-grid {
