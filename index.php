@@ -6,6 +6,7 @@ require_once __DIR__ . '/src/helpers.php';
 $pageTitle = 'Students';
 $students = [];
 $databaseError = false;
+$csrfToken = csrfToken();
 
 try {
     $statement = db()->query(
@@ -77,8 +78,12 @@ endif;
                                 </td>
                                 <td>
                                     <div class="actions">
+                                        <a class="action-link" href="show.php?id=<?= (int) $student['id'] ?>">View</a>
                                         <a class="action-link" href="edit.php?id=<?= (int) $student['id'] ?>">Edit</a>
-                                        <form action="delete.php" method="post">
+                                        <form class="inline-form" action="delete.php" method="post"
+                                            data-confirm="<?= e('Delete ' . $student['first_name'] . ' ' . $student['last_name'] . '?') ?>"
+                                            onsubmit="return confirm(this.dataset.confirm)">
+                                            <input type="hidden" name="_csrf_token" value="<?= e($csrfToken) ?>">
                                             <input type="hidden" name="id" value="<?= (int) $student['id'] ?>">
                                             <button class="action-button" type="submit">Delete</button>
                                         </form>

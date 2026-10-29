@@ -175,6 +175,11 @@ tbody tr:last-child td {
     white-space: nowrap;
 }
 
+.inline-form {
+    display: inline-flex;
+    margin: 0;
+}
+
 .action-link {
     min-height: 32px;
     padding: 6px 9px;
@@ -285,6 +290,42 @@ tbody tr:last-child td {
     margin-top: 24px;
 }
 
+.detail-card {
+    padding: 8px 24px;
+}
+
+.detail-list {
+    margin: 0;
+}
+
+.detail-row {
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr) 2fr;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.detail-row:last-child {
+    border-bottom: 0;
+}
+
+.detail-row dt {
+    color: #647087;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.detail-row dd {
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.back-link {
+    margin-top: 20px;
+}
+
 .button-secondary {
     border: 1px solid #d5dae4;
     background: #fff;
@@ -345,6 +386,15 @@ tbody tr:last-child td {
 
     .student-form {
         padding: 18px;
+    }
+
+    .detail-card {
+        padding: 4px 18px;
+    }
+
+    .detail-row {
+        grid-template-columns: 1fr;
+        gap: 7px;
     }
 
     .error-card {
